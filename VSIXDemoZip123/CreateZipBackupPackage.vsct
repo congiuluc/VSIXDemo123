@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidCreateZipBackupPackage">
+    <Groups>
+      <Group guid="guidCreateZipBackupPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidCreateZipBackupPackageCmdSet" id="CreateZipBackupId" priority="0x0100" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_BUILD" />
+        <Icon guid="guidImages" id="bmpPic1" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Create Project Zip</ButtonText>
+          <ToolTipText>Click to zip!</ToolTipText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\Zip_16.png" usedList="bmpPic1"/>
+    </Bitmaps>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidCreateZipBackupPackage" value="{a0cf9954-2aa9-46ed-9343-528d53a1d9dc}" />
+
+    <GuidSymbol name="guidCreateZipBackupPackageCmdSet" value="{5c16348b-425f-4685-9d08-c5ef46ace96b}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="CreateZipBackupId" value="0x0100" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{47039796-21dc-4c20-9fdc-b8b552c7819f}" >
+      <IDSymbol name="bmpPic1" value="1" />
+     
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
